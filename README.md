@@ -226,9 +226,7 @@ Runtime → Run all
 
 # FAQ
 
-## Q1 — Can I Change The Train/Test Split Ratio?
-
-Yes.
+## Q1 — How do i  Change The Train/Test Split Ratio?
 
 Find:
 
@@ -309,21 +307,8 @@ df = df.sample(n=10000, random_state=42)
 
 ---
 
-## Q6 — Can I Add More Models?
 
-Yes.
-
-Example additions:
-
-```python
-from sklearn.ensemble import RandomForestRegressor
-from sklearn.svm import SVR
-from sklearn.neighbors import KNeighborsRegressor
-```
-
----
-
-## Q7 — Does Data Type Matter?
+## Q6 — Does Data Type Matter?
 
 Yes.
 
@@ -339,57 +324,6 @@ It will fail if your dataset contains:
 Convert them first using:
 - One-hot encoding
 - Label encoding
-
----
-
-## Q8 — Can This Be Used For Classification?
-
-No.
-
-This project is specifically for:
-- Regression
-- Predicting numeric values
-
-Not:
-- Yes/No prediction
-- Category prediction
-- Classification tasks
-
----
-
-# Customization Tips
-
-## Add Cross Validation
-
-```python
-from sklearn.model_selection import cross_val_score
-
-scores = cross_val_score(model, x, y, cv=5)
-
-print(scores)
-```
-
----
-
-## Add Hyperparameter Tuning
-
-```python
-from sklearn.model_selection import GridSearchCV
-
-params = {'alpha': [0.1, 1.0, 10.0]}
-
-grid = GridSearchCV(Ridge(), params, cv=5)
-
-grid.fit(x_train, y_train)
-```
-
----
-
-## Save Results To CSV
-
-```python
-results_df.to_csv('model_comparison_results.csv', index=False)
-```
 
 ---
 
@@ -437,31 +371,6 @@ Make sure this exists:
 ```python
 import pandas as pd
 ```
-
----
-
-# License
-
-MIT License
-
-Free to:
-- Use
-- Modify
-- Distribute
-
----
-
-# Suggested Future Improvements
-
-Potential upgrades:
-
-- Random Forest
-- XGBoost
-- SVM
-- Classification support
-- Automatic outlier removal
-- Hyperparameter tuning
-- Cross-validation reports
 
 ---
 
