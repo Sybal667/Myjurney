@@ -171,8 +171,7 @@ Or use:
 # Example Dataset
 
 The demo dataset comes from DataProfessor's GitHub repository:
-
-:contentReference[oaicite:0]{index=0}
+`https://raw.githubusercontent.com/dataprofessor/data/refs/heads/master/delaney_solubility_with_descriptors.csv`
 
 Dataset contains:
 
@@ -190,37 +189,6 @@ Dataset contains:
 | Classification problem | Use classification models instead |
 | Large datasets | Use sampling |
 | Target not last column | Modify the script |
-
----
-
-# File Structure
-
-```text
-comparemodelsforcsvdata.py   # Main script
-README.md                    # Documentation
-```
-
----
-
-# Quick Start For Beginners
-
-1. Open Google Colab  
-   :contentReference[oaicite:1]{index=1}
-
-2. Upload:
-   - `comparemodelsforcsvdata.py`
-
-3. Replace the dataset path with your CSV
-
-4. Click:
-
-```text
-Runtime → Run all
-```
-
-5. View:
-   - Model comparison table
-   - Best model recommendation
 
 ---
 
