@@ -5,7 +5,7 @@ Perfect for quickly identifying which linear-style model best learns your data's
 
 ---
 
-# What This Script Does
+# What This Script Does , just the surface part!
 
 - Takes any CSV file (with numeric features and a numeric target column)
 - Splits data into:
@@ -89,23 +89,12 @@ df = pd.read_csv('/Users/yourname/Downloads/your_data.csv')
 df = pd.read_csv('https://raw.githubusercontent.com/yourusername/yourrepo/main/yourdata.csv')
 ```
 
-### Option D — Google Colab Upload
-
-```python
-from google.colab import files
-
-uploaded = files.upload()
-
-df = pd.read_csv('your_data.csv')
-```
-
----
 
 ## Step 3 — Run The Script
 
 Execute all cells or run the script.
 
-The script will:
+The script will, like i mentoned above :
 
 1. Split your data
 2. Train all 8 models
@@ -116,7 +105,7 @@ The script will:
 
 # Understanding The Results
 
-The output table contains these metrics:
+The output table contains these metrics(Used for evaluating the best model):
 
 | Metric | Meaning |
 |---|---|
@@ -173,28 +162,13 @@ Or use:
 The demo dataset comes from DataProfessor's GitHub repository:
 `https://raw.githubusercontent.com/dataprofessor/data/refs/heads/master/delaney_solubility_with_descriptors.csv`
 
-Dataset contains:
-
-- Molecular descriptors as features
-- LogS (solubility) as target variable
-
 ---
 
-# Limitations & Solutions
 
-| Issue | Solution |
-|---|---|
-| Non-numeric data | Use encoding or remove text columns |
-| Missing values | Use `df.dropna()` or `df.fillna()` |
-| Classification problem | Use classification models instead |
-| Large datasets | Use sampling |
-| Target not last column | Modify the script |
 
----
+# Quesions you might ask ..
 
-# FAQ
-
-## Q1 — How do i  Change The Train/Test Split Ratio?
+## Q1 — How do i  Change The Train/Test Split Ratio?because you want to ..
 
 Find:
 
@@ -235,18 +209,6 @@ x = df.drop('your_target_column_name', axis=1)
 
 ---
 
-## Q3 — Why Do Some Models Give Different Results?
-
-Some models use random initialization.
-
-For reproducible results:
-
-```python
-SGDRegressor(random_state=42)
-```
-
----
-
 ## Q4 — Can I Save The Best Model?
 
 Yes.
@@ -278,7 +240,7 @@ df = df.sample(n=10000, random_state=42)
 
 ## Q6 — Does Data Type Matter?
 
-Yes.
+Yes.Like i said above 
 
 The script requires:
 - Integers
@@ -289,7 +251,7 @@ It will fail if your dataset contains:
 - Dates
 - Categories
 
-Convert them first using:
+Convert them first using(which you have to learn):
 - One-hot encoding
 - Label encoding
 
@@ -299,7 +261,7 @@ Convert them first using:
 
 ## Error: could not convert string to float
 
-Your CSV contains text columns.
+Your CSV contains text columns.(you did not follow the rules.)
 
 Solution:
 - Remove text columns
@@ -307,7 +269,7 @@ Solution:
 
 ---
 
-## Error: Input contains NaN
+## Error: Input contains NaN(maybe you don't have times to debug your csv)
 
 Your dataset contains missing values.
 
